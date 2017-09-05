@@ -1,0 +1,22 @@
+{
+  "provisioners": [
+       {
+        "type": "ansible",
+        "playbook_file": "ansible/playbook.yml",
+        "role_paths": [
+          "ansible/roles/dev-sec.os-hardening"
+        ]
+      }
+  ],
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "source_ami": "ami-061b1560",
+      "instance_type": "t2.micro",
+      "ssh_username": "centos",
+      "ami_name": "base-centos-7 {{timestamp}}"
+    }
+  ],
+  "post-processors": []
+}
