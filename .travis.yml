@@ -26,4 +26,4 @@ before_install:
 - tar -zxvf /tmp/ansible-2.3.2.0.tar.gz -C /tmp
 script:
 - export PATH=/tmp/ansible-2.3.2.0/bin:$PATH
-- /tmp/packer -debug build packer.json
+- /tmp/packer build -debug packer.json
