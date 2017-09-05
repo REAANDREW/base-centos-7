@@ -22,9 +22,10 @@ before_install:
 - unzip -d roles/ /tmp/ansible-os-hardening.zip
 - curl -o /tmp/packer.zip https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip
 - unzip -d /tmp /tmp/packer.zip
-- curl -o /tmp/ansible-2.2.0.0.tar.gz http://releases.ansible.com/ansible/ansible-2.2.0.0.tar.gz
-- tar -zxvf /tmp/ansible-2.2.0.0.tar.gz -C /tmp
 script:
-- export PATH=/tmp/ansible-2.2.0.0/bin:$PATH
+- pip install --user --upgrade pip virtualenv virtualenvwrapper
+- virtualenv ansible2.1
+- source ansible2.1/bin/activate
+- pip install ansible==2.1
 - ansible-playbook --version
   #- /tmp/packer build packer.json
