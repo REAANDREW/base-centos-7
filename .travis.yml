@@ -17,9 +17,9 @@ env:
   - secure: CL9Is3mWA0AwcJUdbzhOu1jKQ1D/BwJL5iKIIQffLQfRYzQiFbEDnqKTrBbnXoIOBX6MGDCdV6864M9lYcS+v4C2OGfaG6bJVlXjYqgPpe+BmNoZ9AVC7uzzq2OgesgtzJfHim1y74RgR2i5L4vaoOt3PM2Qzmft516q44QAve+L1cRTM2fxlsWVMG1txCsDRwXEncZByIvB9XYljsHI+aofNNgZxPEeNBFdLVHe2i1V7laMo/uyiAdfyk+iJXDG7qPwK7MZYa8Yf60w8d68SSAS2aLLb7VKY16drNdBig9uzDAIGHhoS8bJsNFK5cI0maxOSoDBzd+7EOPKX6cqjJ/p+9h/7z6l4N7h11/k12SGs+8o1yN92qQzRibGhODlqP+j4WzFzDOOIJSLU/wg4Kj1MLAiXkRHTspejtbxilcKeX1Zj5iXofSJHT8cTtU15uqf37g5EO8JfmydKHcQhzGuTmRd32ATW2tBt9LpCzcOEzEO0JsMnuVcer9f6Sc/PMtubqI3vvwVoWjQDJd0bynVLJITMgeho4dkVdodnS1q5UiKi+yDBuYdfK1WkeMXDMvwGMDpn+LjxZ7OW3/486hETODkt07gWmZh0jecnOQHPJsPvk3us3VkHnAU47HHWlnr1PFOu/WEscqAWP/ezdwJoV/SgvAtLIvsHMGdbKQ=
   - secure: eI0IBxcjaemUiM7ItxhNaJDiuERlGjpyCfTwGIBzhnx7/tOEu9nJ30wRjWUEugY/de6ENsHN1P/TsFd6oPQNBDHX2+1zKfLoF45q20wo7LEDnEQChMr8Sqaw8DIMhkFZaFMbt0QBKHOcy3dNaX4Yi5sNULO7jYxjdBNYazoq90Favw8gLHkcoGwMGBHgXE/OMPXVrTVjxiikGW7UqUsKW7U+MOsgW8b5oiC4P8rf4vZb8iE3t01vo/4txos7VZib6OoWrs9ULs8VLjVXg05q+OYcDx4fdVUnTmuAevGsfUrih/G5byoq9GOO9I7D7lG573u9e2t6GiwOKzG32Sjl1FIb95afqV/ic40sz3wOZrnsb94AnOo4lMyPyTLe7ixZDQ518e7cCrr0zKh6IzyCfAhhcAAiZSzF2Qr/sFT3F2xZl0VrkWgvs0F9sti25I+hK/tB8kblCZ34kJ1PhQisme35QSsgVXzYKOUv/lcaxHgEigE5CJff4G9pz9cb2a8qE7TSjFVe5bCJP+eyxlT8GGBhe1upZRT6Inogmu26GkV8J3qTUqUyRGrTbbUWYBKYcKRzeLpV0J9bqjsWLzjaNNPv+jIWYnXHIbkngG1okd10mrl5OkJmczCgd5IDlHuXNQRKiRnl2s2FDTQmqkm1GOftoiICR4RS67U7fD23k7g=
 before_install:
-- mkdir -p ansible/roles
+- mkdir roles
 - curl -Lo /tmp/ansible-os-hardening.zip https://github.com/dev-sec/ansible-os-hardening/archive/4.1.0.zip
-- unzip -d ansible/roles/ /tmp/ansible-os-hardening.zip
+- unzip -d roles/ /tmp/ansible-os-hardening.zip
 - curl -o /tmp/packer.zip https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip
 - unzip -d /tmp /tmp/packer.zip
 - curl -o /tmp/ansible.tar.gz http://releases.ansible.com/ansible/ansible-2.3.2.0.tar.gz
