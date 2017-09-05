@@ -23,9 +23,8 @@ before_install:
 - curl -o /tmp/packer.zip https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip
 - unzip -d /tmp /tmp/packer.zip
 script:
-- pip install --user --upgrade pip virtualenv virtualenvwrapper
 - virtualenv ansible2.1
 - source ansible2.1/bin/activate
 - pip install ansible==2.1
 - ansible-playbook --version
-  #- /tmp/packer build packer.json
+- /tmp/packer build packer.json
