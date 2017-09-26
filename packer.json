@@ -9,7 +9,12 @@
     {
       "type": "shell",
       "script": "./bin/remove-packages.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./bin/toggle-services.sh"
     }
+
   ],
   "builders": [
     {
