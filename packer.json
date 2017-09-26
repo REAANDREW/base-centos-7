@@ -18,9 +18,8 @@
       "source_ami_filter": {
           "most_recent":true,
           "owners":["self"],
-          "filter":{
-            "name":"name",
-            "values":["base-centos-7"]
+          "filters":{
+            "name":"base-centos-7"
           }
       },
       "instance_type": "t2.micro",
