@@ -5,13 +5,24 @@
         "inline": [
             "sudo yum -y update"
         ]
+    },
+    {
+      "type": "shell",
+      "script": "./bin/remove-packages.sh"
     }
   ],
   "builders": [
     {
       "type": "amazon-ebs",
       "region": "eu-west-1",
-      "source_ami": "ami-061b1560",
+      "source_ami_filter": {
+          "most_recent":true,
+          "owners":["self"],
+          "filter":{
+            "name":"name",
+            "values":["base-centos-7"]
+          }
+      },
       "instance_type": "t2.micro",
       "ssh_username": "centos",
       "ami_name": "base-centos-7",
