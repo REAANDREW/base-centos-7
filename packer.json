@@ -1,9 +1,11 @@
 {
   "provisioners": [
-       {
-        "type": "ansible",
-        "playbook_file": "playbook.yml"
-      }
+    {
+        "type": "shell",
+        "inline": [
+            "sudo yum -y update"
+        ]
+    }
   ],
   "builders": [
     {
@@ -12,7 +14,9 @@
       "source_ami": "ami-061b1560",
       "instance_type": "t2.micro",
       "ssh_username": "centos",
-      "ami_name": "base-centos-7 {{timestamp}}"
+      "ami_name": "base-centos-7",
+      "force_deregister": true,
+      "force_delete_snapshot": true
     }
   ],
   "post-processors": []
